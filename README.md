@@ -1,20 +1,20 @@
-#Overview
+##Overview
 
 TextMetrics is a small library that provides text measurement using canvas. It is pretty much equivalent to https://github.com/Pomax/fontmetrics.js but has slightly different API and supports caching by default (including localStorage cache).
 
 There is a demo in /demo folder, unfortunately I haven't had time to properly integrate it as GH page yet.
 
-#Downloads
+##Downloads
 Current version is 0.8.0.  
 You can get it in [full](dist/textmetrics-0.8.0.js) or [minified](dist/textmetrics-0.8.0.min.js) form.
 
-#Dependencies
+##Dependencies
 The only dependencies are browser APIs. TextMetrics expects full implementation of `<canvas>` and `localStorage`.
 
-#Usage
+##Usage
 There are two main functions exported, both of which can be accessed through `TextMetrics` object.
 
-## TextMetrics.measureHeight
+### TextMetrics.measureHeight
     TextMetrics.measureHeight(text, fontFamily, fontSize, options)
     
     Measures height for the given text according to arguments provided.
@@ -33,7 +33,7 @@ There are two main functions exported, both of which can be accessed through `Te
         box         Number   Total height of the box that would be normally used by the text (e.g. default span height).
     }
 
-## TextMetrics.fitHeight
+### TextMetrics.fitHeight
     TextMetrics.fitHeight(text, boxHeight, fontFamily, options)
     
     Finds the maximum font size and margin that can fit in a given box.
@@ -51,10 +51,10 @@ There are two main functions exported, both of which can be accessed through `Te
         marginTop   Number   Margin required to balance the difference between text top and box top (normally negative).
     }
 
-## Other functions
+### Other functions
 TextMetrics also exports `measureWidth` function, but it is at the moment equivalent to the result of `canvas.measureText` and not really recommended to be used at the moment.
 
-#Roadmap
+##Roadmap
 I can't guarantee I will have much time to implement these, but here is a list of potential improvements:
 
 * Support font style and font weight
