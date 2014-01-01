@@ -22,7 +22,7 @@ label {
 }
 
 #demo-fit {
-    width: 500px;
+    min-width: 500px;
     background-color: #ccc;
 }
 

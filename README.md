@@ -60,3 +60,4 @@ I can't guarantee I will have much time to implement these, but here is a list o
 * Support font style and font weight
 * Add detailed width measurement (potentially through canvas, depending on how detailed that is)
 * Better fitting precision
+* Support different line heights
