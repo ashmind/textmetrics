@@ -54,9 +54,12 @@
         console.log('Fit:', fit);
 
         $div.height(height)
-            .css('font-size', fit.fontSize)
+            .css({
+                fontFamily: fontFamily,
+                fontSize: fit.fontSize + 'px'
+            })
             .find('span')
-            .css('margin-top', fit.marginTop)
+            .css('marginTop', fit.marginTop)
             .text(text);
     }
 })(jQuery);
