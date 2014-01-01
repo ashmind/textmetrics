@@ -1,0 +1,31 @@
+body {
+    padding: 2%;
+}
+
+form {
+    display: inline-block; 
+    vertical-align: top;
+}
+
+.control {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    min-width: 60px;
+}
+
+#demo-measure, #demo-fit {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#demo-fit {
+    width: 500px;
+    background-color: #ccc;
+}
+
+#demo-fit span {
+    display: block;
+}
