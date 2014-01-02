@@ -1,5 +1,5 @@
 /*
- * TextMetrics 0.8.1
+ * TextMetrics 0.8.2
  *
  * Copyright (c) 2013 Andrey Shchekin
  * Dual-licensed under MIT/BSD.
@@ -8,7 +8,8 @@
 this.TextMetrics = (function(global) {
     "use strict";
 
-    var localStorage = global.localStorage;
+    var localStorage;
+    try { localStorage = global.localStorage; } catch(e) {}
 
     var cacheKey = '__TextMetrics_cache__';
     var cache = loadOrCreateCache();

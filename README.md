@@ -5,8 +5,8 @@ TextMetrics is a small library that provides text measurement using canvas. It i
 There is a demo in /demo folder, unfortunately I haven't had time to properly integrate it as GH page.
 
 ##Downloads
-Current version is 0.8.1.  
-You can get it in [full](dist/textmetrics-0.8.1.js) or [minified](dist/textmetrics-0.8.1.min.js) form.
+Current version is 0.8.2.  
+You can get it in [full](dist/textmetrics-0.8.2.js) or [minified](dist/textmetrics-0.8.2.min.js) form.
 
 ##Dependencies
 The only dependencies are DOM APIs.  
