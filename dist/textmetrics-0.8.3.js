@@ -1,5 +1,5 @@
 /*
- * TextMetrics 0.8.2
+ * TextMetrics 0.8.3
  *
  * Copyright (c) 2013 Andrey Shchekin
  * Dual-licensed under MIT/BSD.
@@ -77,6 +77,13 @@ this.TextMetrics = (function(global) {
         };
     };
 
+    /** Resets cache */
+    exports.resetCache = function () {
+        cache = {};
+        cacheChanged = true;
+        saveCacheIfChanged();
+    };
+
     /** Measures width metrics for a given text. */
     exports.measureWidth = function(text, fontFamily, fontSize) {
         context.font = fontSize + 'px ' + fontFamily;
@@ -115,8 +122,11 @@ this.TextMetrics = (function(global) {
   
     function createSpan() {
         var wrapper = document.createElement('div');
-        wrapper.style.position = 'absolute';
-        wrapper.style.visibility = 'hidden';
+        var style = wrapper.style;
+        style.position = 'absolute';
+        style.visibility = 'hidden';
+        style.top = '0';
+        style.left = '0';
         var span = document.createElement('span');        
         wrapper.appendChild(span);
         document.body.appendChild(wrapper);
