@@ -2,14 +2,16 @@
 
 TextMetrics is a small library that provides text measurement using canvas. It is pretty much equivalent to https://github.com/Pomax/fontmetrics.js but has slightly different API and supports caching by default (including localStorage cache).
 
-There is a demo in /demo folder, unfortunately I haven't had time to properly integrate it as GH page yet.
+There is a demo in /demo folder, unfortunately I haven't had time to properly integrate it as GH page.
 
 ##Downloads
-Current version is 0.8.0.  
-You can get it in [full](dist/textmetrics-0.8.0.js) or [minified](dist/textmetrics-0.8.0.min.js) form.
+Current version is 0.8.1.  
+You can get it in [full](dist/textmetrics-0.8.1.js) or [minified](dist/textmetrics-0.8.1.min.js) form.
 
 ##Dependencies
-The only dependencies are browser APIs. TextMetrics expects full implementation of `<canvas>` and `localStorage`.
+The only dependencies are DOM APIs.  
+Mandatory: `<canvas>`.  
+Optional: `localStorage`.  
 
 ##Usage
 There are two main functions exported, both of which can be accessed through `TextMetrics` object.
@@ -58,6 +60,6 @@ TextMetrics also exports `measureWidth` function, but it is at the moment equiva
 I can't guarantee I will have much time to implement these, but here is a list of potential improvements:
 
 * Support font style and font weight
-* Add detailed width measurement (potentially through canvas, depending on how detailed that is)
+* Add proper width measurement (potentially with the same algorithm, or using `measureText` if it is good enough)
 * Better fitting precision
 * Support different line heights

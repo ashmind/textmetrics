@@ -6,61 +6,49 @@
     <link rel="stylesheet" href="demo.css" />
   </head>
   <body>
+    <section id="common">
+      <h2>Common</h2>
+
+      <div class="control">
+        <label for="text">Text:</label>
+        <input name="text" type="text" value="ACGTacgt" />
+      </div>
+  
+      <div class="control">
+        <label for="font-family">Font family:</label>
+        <input name="font-family" type="text" value="sans-serif" />
+      </div>
+
+      <!--div class="control">
+        <label for="line-height">Line height:</label>
+        <input name="line-height" type="text" value="normal" />
+      </div-->
+
+      <div class="control">
+        <label>
+          <input name="cache" type="checkbox" checked />
+          Cache
+        </label>      
+      </div>
+    </section>
+
     <section id="measure">
       <h2>Measure height</h2>
-      <form>
-        <div class="control">
-          <label for="text">Text:</label>
-          <input name="text" type="text" value="ACGTacgt" />
-        </div>
-  
-        <div class="control">
-          <label for="size">Size:</label>
-          <input name="size" type="number" value="80" />
-        </div>
-  
-        <div class="control">
-          <label for="font">Font:</label>
-          <input name="font" type="text" value="sans-serif" />
-        </div>
-
-        <div class="control">
-          <label>
-            <input name="cache" type="checkbox" checked />
-            Cache
-          </label>      
-        </div>
-      </form>
+      <div class="control">
+        <label for="font-size">Font Size:</label>
+        <input name="font-size" type="number" value="80" />
+      </div>
 
       <canvas id="demo-measure" width="500" height="200"></canvas>
     </section>
 
     <section id="fit">
       <h2>Fit height</h2>
-      <form>
-        <div class="control">
-          <label for="text">Text:</label>
-          <input name="text" type="text" value="ABCDE" />
-        </div>
+      <div class="control">
+        <label for="box-height">Box Height:</label>
+        <input name="box-height" type="number" value="80" />
+      </div>
   
-        <div class="control">
-          <label for="height">Height:</label>
-          <input name="height" type="number" value="80" />
-        </div>
-  
-        <div class="control">
-          <label for="font">Font:</label>
-          <input name="font" type="text" value="sans-serif" />
-        </div>
-
-        <div class="control">
-          <label>
-            <input name="cache" type="checkbox" checked />
-            Cache
-          </label>      
-        </div>
-      </form>
-
       <div id="demo-fit"><span></span></div>
     </section>
 

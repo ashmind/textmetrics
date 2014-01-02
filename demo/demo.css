@@ -1,10 +1,14 @@
 body {
-    padding: 2%;
+    padding-left: 1%;
 }
 
 form {
     display: inline-block; 
     vertical-align: top;
+}
+
+section:not(:first-of-type) {
+    margin-top: 50px;
 }
 
 .control {
@@ -13,19 +17,21 @@ form {
 
 label {
     display: inline-block;
-    min-width: 60px;
+    min-width: 100px;
 }
 
 #demo-measure, #demo-fit {
-    display: inline-block;
-    margin-left: 30px;
+    display: block;
+    margin-top: 20px;
 }
 
 #demo-fit {
-    min-width: 500px;
+    width: 500px;
     background-color: #ccc;
+    position: relative;
 }
 
 #demo-fit span {
     display: block;
+    position: absolute;
 }

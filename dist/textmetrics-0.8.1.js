@@ -1,12 +1,14 @@
 /*
- * TextMetrics 0.8.0
+ * TextMetrics 0.8.1
  *
  * Copyright (c) 2013 Andrey Shchekin
  * Dual-licensed under MIT/BSD.
-  */
+ */
 
-this.TextMetrics = (function() {
+this.TextMetrics = (function(global) {
     "use strict";
+
+    var localStorage = global.localStorage;
 
     var cacheKey = '__TextMetrics_cache__';
     var cache = loadOrCreateCache();
@@ -82,7 +84,10 @@ this.TextMetrics = (function() {
         };
     };
   
-    function loadOrCreateCache() {    
+    function loadOrCreateCache() {
+        if (!localStorage)
+            return {};
+
         var cacheString = localStorage.getItem(cacheKey);
         if (!cacheString)
             return {};
@@ -91,7 +96,7 @@ this.TextMetrics = (function() {
     }
   
     function saveCacheIfChanged() {
-        if (!cacheChanged)
+        if (!cacheChanged || !localStorage)
             return;
     
         localStorage.setItem(cacheKey, JSON.stringify(cache));
@@ -110,7 +115,7 @@ this.TextMetrics = (function() {
     function createSpan() {
         var wrapper = document.createElement('div');
         wrapper.style.position = 'absolute';
-        wrapper.style.visibility = 'hidden';    
+        wrapper.style.visibility = 'hidden';
         var span = document.createElement('span');        
         wrapper.appendChild(span);
         document.body.appendChild(wrapper);
@@ -189,4 +194,4 @@ this.TextMetrics = (function() {
     }
     
     return exports;
-})();
+})(this);
