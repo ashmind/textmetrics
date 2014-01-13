@@ -1,6 +1,6 @@
 ##Note
 
-This library currently does not work in Firefox.
+This library currently does not work in Firefox.  
 http://stackoverflow.com/questions/20880683/how-to-work-around-firefox-canvas-text-rendering-bug
 
 ##Overview
