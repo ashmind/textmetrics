@@ -1,3 +1,8 @@
+##Note
+
+This library currently does not work in Firefox.
+http://stackoverflow.com/questions/20880683/how-to-work-around-firefox-canvas-text-rendering-bug
+
 ##Overview
 
 TextMetrics is a small library that provides text measurement using canvas. It is pretty much equivalent to https://github.com/Pomax/fontmetrics.js but has slightly different API and supports caching by default (including localStorage cache).
